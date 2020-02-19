@@ -1,0 +1,57 @@
+---
+layout:	home
+---
+<div class="container">
+	<h4>{{ page.title }} @ {{ page.date | date_to_string }}</h4>
+	<hr>
+	<div class="article-list">
+		{% for i in (1..page.counter) %}
+			<a href="https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/articles/{{ page.date | date: "%Y-%m-%d"}}/{{i}}.jpg" data-lightbox="roadtrip">
+				<div class="mock-img">
+					<img src="" />
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+	<address>
+	  <strong>联系方式</strong><br>
+	  地址: 西安市碑林区和平门里大印视觉<br>
+	  电话: 13772525129<br>
+	  QQ: <a title="76839106" href="https://wpa.qq.com/msgrd?v=3&amp;uin=76839106" target="_blank">76839106</a><br>
+	  微博: <a title="大印VISION" target="_blank" href="https://weibo.com/chendayinyin">大印VISION</a><br><br>
+	  <img src="https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/wx.png" title="微信" alt="微信"/>
+	</address>
+	<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"dayinvision"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'https://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<style>
+		#ds-thread #ds-reset .ds-powered-by a,
+		#ds-thread #ds-reset .ds-powered-by a:hover{color:#fff; cursor: default;}
+	</style>
+	<!-- Duoshuo Comment END -->
+	<script>
+	$(document).ready(function(){
+			var loadImg = function(i, counter){
+					if(i < counter) {
+							$(".article-list img").eq(i++).attr("src", "https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/articles/{{ page.date | date: "%Y-%m-%d"}}/" + i + ".jpg").css({"width": "100%", "height": "auto"}).load(function(){
+									loadImg(i, counter);
+							});
+					}
+			}
+			loadImg(0, {{ page.counter }});
+			$(document).bind("contextmenu",function(e){
+        	return false;
+    	});
+	})
+	</script>
+</div>

@@ -1,0 +1,11 @@
+---
+layout: blog
+---
+<ul class="blogs list-unstyled">
+  {% for blog in site.categories.blog %}
+  <li>
+    <strong><a href="{{ blog.url }}">{{ blog.title }}</a></strong>
+    <div class="blog-excerpt text-muted">{{ blog.excerpt }}</div>
+  </li>
+  {% endfor %}
+</ul>

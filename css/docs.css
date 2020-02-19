@@ -1,0 +1,213 @@
+.logo {
+	color: #aaa;
+}
+
+#banner {
+	border-bottom: 0;
+}
+
+#banner .menu {
+	margin-top: 60px;
+	font-size: 18px;
+	padding-bottom: 1px;
+}
+
+.footer {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.footer div {
+	margin-bottom: 10px;
+}
+
+.menu li {
+	width: 30%;
+
+}
+
+.menu li a {
+	width: 100%;
+	display: inline-block;
+	color: #000;
+}
+
+.menu li a:hover {
+	text-decoration: none;
+}
+
+.menu .on span {
+	color: red;
+}
+
+#cate-bar {
+	display: inline-block;
+	height: 3px;
+	background: red;
+	position: absolute;
+	top: 100%;
+	width: 45px;
+	overflow: hidden;
+}
+
+#articles {
+	margin-bottom: 50px;
+}
+
+#articles li {
+	margin: 7px 0;
+	cursor: pointer;
+}
+
+#articles li img {
+	width: 350px;
+	height: 233px;
+	box-shadow: #999 1px 1px 4px;
+}
+
+#articles .cover {
+	background: #000;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	width: 350px;
+	height: 0px;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	line-height: 0px;
+	position: absolute;
+}
+
+.section {
+	margin-left: 30%;
+	padding-top: 80px;
+}
+
+.section-m {
+    padding: 80px;
+}
+
+.aside {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 100%;
+	max-width: 500px;
+	background: #000;
+	box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.first-content {
+	display: none;
+}
+
+.blog,
+.package {
+	font-size: 18px;
+}
+
+.blog ul,
+.package ul,
+.package-cont {
+	width: 70%;
+	margin: 0 auto;
+}
+
+ul.blogs {
+	margin-top: 50px;
+	padding: 0 5px;
+}
+
+
+.blog-article {
+	width: 70%;
+	margin: 50px auto;
+	padding: 0 5px;
+}
+
+.blog-excerpt {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
+.blog-title {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.blog-cont {
+	margin: 30px 0 80px 0;
+	font-size: 16px;
+	line-height: 1.6em;
+}
+
+.blog-cont img {
+	max-width: 100%;
+	box-shadow: #999 1px 1px 4px;
+}
+
+ul.blogs li {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.package .aside {
+	background-image: url('https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/package.jpeg');
+}
+
+.blog .aside {
+	background-image: url('https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/blog.jpeg');
+}
+
+.package-cont {
+	margin-top: 30px;
+	font-size: 15px;
+}
+
+.article-list {
+	text-align: center;
+	padding: 0px 10px;
+}
+
+.article-list img {
+	max-width: 100%;
+	box-shadow: #999 1px 1px 4px;
+}
+
+#to-top {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 40px;
+	height: 40px;
+	padding-right: 2px;
+	line-height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 40px;
+	font-size: 24px;
+	color: #666;
+	text-align: center;
+	cursor: pointer;
+	background: #fff;
+}
+
+#to-top:hover {
+	color: #444;
+	border: 1px solid #999;
+}
+
+.mock-img {
+	background: #f9f9f9;
+	margin-bottom: 20px;
+}
+
+.mock-img img {
+	cursor: pointer;
+	background: url('../img/img-loading.gif') no-repeat center center scroll;
+	height: 640px;
+	width: 100%;
+}

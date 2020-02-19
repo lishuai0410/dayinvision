@@ -1,0 +1,64 @@
+---
+layout: home
+---
+<div class="container" id="content">
+  <div class="row visible-xs-block">
+    <div class="col-md-12">
+      <a href="/price" class="btn btn-danger btn-lg btn-block">查看报价！</a>
+      <br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <video class="video-js vjs-default-skin col-md-12 vjs-16-9" controls preload="auto" poster="https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/articles/2015-05-01/63.jpg" data-setup="{}" height="570px">
+        <source src="https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/video/wedding.mp4" type='video/mp4'>
+      </video>
+    </div>
+    <div class="col-md-3 hidden-sm hidden-xs">
+      <div class="page-header">
+        <h3>
+          邂逅
+          <small>大印视觉</small>
+        </h3>
+      </div>
+      <p>
+        邂逅最美的时光，留住最美的一刻<br>
+        如何让你遇见我<br>
+        在我最美丽的时刻<br>
+        一生最美好的场景<br>
+        就是遇见你<br>
+        找一个人<br>
+        惺惺相惜<br>
+        找一颗心<br>
+        心心相印
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row" id="articles">
+    {% for article in site.categories.article %}
+    <div class="col-md-4 article" data-date="{{ article.date | date_to_string }}" data-url="{{ article.url }}">
+      <div class="cover"></div>
+      <img src="https://dayinimg.oss-cn-zhangjiakou.aliyuncs.com/img/articles/{{ article.date | date: "%Y-%m-%d"}}/cover.jpg">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+    $(".article").mouseenter(function(){
+        height = $(".article img").width() * 0.669444
+        $(this).children(".cover").css({width: $(".article img").width() + "px"})
+        $(this).children(".cover").text($(this).attr("data-date")).stop().animate({height: height + "px", "line-height": height + "px"}, 300);
+    }).mouseleave(function(){
+        $(this).children(".cover").stop().animate({height: "0px", "line-height": "0px"}, 300).text("");
+    });
+
+    $(".article").click(function(){
+    	location.href = $(this).attr("data-url");
+    })
+
+    $(".wx").outerHeight($(".carousel").outerHeight())
+    $(".wx").css({"line-height": $(".carousel").height() + "px"})
+})
+</script>
